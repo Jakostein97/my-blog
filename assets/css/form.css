@@ -1,0 +1,28 @@
+/* .formTitle {
+    color: var(--text);
+    display: inline;
+    position: absolute;
+    top: 175px;
+    left: 65%;
+}
+
+.form {
+    color: var(--text);
+    display: inline;
+    position: absolute;
+    top: 300px;
+    left: 65%; 
+} */
+
+.form > div > label {
+    display: block;
+}
+
+.form > div > textarea, .form > div > input {
+    width: 100%;
+    
+}
+
+.form {
+   
+}

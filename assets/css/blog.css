@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=LXGW%20WenKai%20TC:700|LXGW%20WenKai%20TC:400');
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+}
+
+:root {
+    --text: #008091;
+    --background: #f0b887;
+    --primary: #bdb647;
+    --secondary: #e78240;
+    --accent: #59864b;
+    --darkBackground: #008091;
+    --darkColor: white;
+}
+
+.backBtn {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.icon {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 1%;
+}
+
+
+.horizontal-line {
+    border-top: 10px solid var(--accent);
+}
+
+.post {
+    width: 100%;
+    border: 2px solid var(--secondary);
+    padding: 20px;
+    margin: 10px;
+}
+
+.dark-theme {
+    background-color: var(--darkBackground);
+    color: var(--darkColor);
+}
+
+footer {
+    display: block;
+    text-align: center;
+}

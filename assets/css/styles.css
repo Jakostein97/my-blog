@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=LXGW%20WenKai%20TC:700|LXGW%20WenKai%20TC:400');
+
+* {
+    color: var(--text);
+}
+
+:root {
+    --text: #008091;
+   --background: #f0b887;
+   --primary: #bdb647;
+   --secondary: #e78240;
+   --accent: #59864b;
+}
+
+body {
+  font-family: 'LXGW WenKai TC';
+  font-weight: 400;
+  background-color: var(--background);
+}
+
+main {
+    display: flex;
+}
+
+img {
+    width: 40%; 
+    height: auto;
+    position: absolute;
+    top: 300px;
+     left:3%;
+     border-radius: 15%;
+}
+
+
+
+h1, h2, h3, h4, h5 {
+  font-family: 'LXGW WenKai TC';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {
+    color: var(--text);
+    display: inline;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    font-size: 4.210rem;
+}
+
+h2 {font-size: 3.158rem; /* 50.56px */
+
+}
+
+h3 {font-size: 2.369rem; /* 37.92px */
+    color: var(--text);
+}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+
+br {
+    
+}
+
+.icon {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.horizontal-line {
+    border-top: 10px solid var(--accent);
+}
+
+.vertical-line {
+    border-right: 10px solid var(--accent); /* Adjust width and color as needed */
+    height: 100%; /* Adjust height as needed */
+    margin-right: 65%;
+}
+
+@media screen and (max-width: 500px) {
+    h1 > strong {
+        font-size: 10px;
+    }
+
+    h3 {
+        font-size: 10px;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
