@@ -12,6 +12,10 @@ function saveFormData () {
     const titleValue = titleInput.value;
     const contentValue = contentInput.value;
 
+    if (emailValue === "" || titleValue === "" || contentValue === "") {
+        alert("Please fill in all fields.");
+        return;
+    }
     // object vs array || Use an array when you are working with the same exact values || use an object when we want 2 different data with different uses
    const postObject = {
         email: emailValue,
@@ -35,24 +39,23 @@ document.querySelector('#submitBtn').addEventListener('click', function(event) {
     // Redirect to the posts page
 })
 
-// Function to check if the form is incomplete
-function checkFormCompletion() {
-    let emailInput = document.getElementById('emailInput');
-    
-    // Check if the email input is empty
-    if (emailInput.value === '') {
-        alert('Please fill in the username field before submitting the form.');
-        return false; // Prevent form submission
-    }
-    
-    // Add more checks for other form fields if needed
-    
-    return true; // Allow form submission if all fields are filled
-}
+const form = document.querySelector('.form');
 
-// Add event listener to the form submit event
-document.getElementById('submitBtn').addEventListener('submit', function(event) {
-    if (!checkFormCompletion()) {
-        event.preventDefault(); // Prevent form submission if form is incomplete
+form.addEventListener('submit', function(event) {
+    const requiredFields = document.querySelectorAll('.required');
+    let isValid = true;
+
+    requiredFields.forEach(field => {
+        if (field.value.trim() === '') {
+            isValid = false;
+            // Display a prompt to complete the form
+            alert('Please fill out all required fields.');
+        }
+    });
+
+    if (!isValid) {
+        event.preventDefault(); // Prevent form submission
+    } else {
+        saveFormData(); // Call saveFormData function if all required fields are filled
     }
 });
